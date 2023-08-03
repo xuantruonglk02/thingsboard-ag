@@ -9,8 +9,8 @@ const { stream } = require('./firebase-stream');
 
 dotenv.config();
 
-// streamData();
-loadData();
+streamData();
+// loadData();
 
 function streamData() {
     // Field1 - Humidity Sensor

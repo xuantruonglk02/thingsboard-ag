@@ -1,0 +1,7 @@
+version: '3.0'
+services:
+    firebase-streaming:
+        restart: always
+        build:
+            context: .
+            dockerfile: Dockerfile

@@ -1,4 +1,5 @@
 /data
+/data-firebase
 /logs
 /node_modules
 .env

@@ -27,7 +27,7 @@ function streamData() {
     );
 }
 function loadData() {
-    const data = require('./history-data/directionapp-8aee1-default-rtdb-export.json');
+    const data = require('../data-firebase/directionapp-8aee1-default-rtdb-export.json');
 
     // Field1 - Humidity Sensor
     const humidityData = data.user.field1.humidity_minute;

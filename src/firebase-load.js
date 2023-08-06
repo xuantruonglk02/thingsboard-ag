@@ -18,11 +18,35 @@ loadData();
 function loadData() {
     const data = require('../data-firebase/directionapp-8aee1-default-rtdb-export.json');
 
-    // Field1 - Humidity Sensor
-    const humidityData = data.user.field1.humidity_minute;
+    // // Field1 - Humidity Sensor
+    // const humidityData = data.user.field1.humidity_minute;
+    // load(
+    //     humidityData,
+    //     process.env[ConfigKeys.THINGSBOARD_FIELD1_HUMIDITY_SENSOR_ACCESS_TOKEN],
+    //     MapHumiditySensorWithFirebase
+    // );
+
+    // Field2 - Humidity Sensor
+    const humidityData2 = data.user.field2.humidity_minute;
     load(
-        humidityData,
-        process.env[ConfigKeys.THINGSBOARD_FIELD1_HUMIDITY_SENSOR_ACCESS_TOKEN],
+        humidityData2,
+        process.env[ConfigKeys.THINGSBOARD_FIELD2_HUMIDITY_SENSOR_ACCESS_TOKEN],
+        MapHumiditySensorWithFirebase
+    );
+
+    // Field3 - Humidity Sensor
+    const humidityData3 = data.user.field3.humidity_minute;
+    load(
+        humidityData3,
+        process.env[ConfigKeys.THINGSBOARD_FIELD3_HUMIDITY_SENSOR_ACCESS_TOKEN],
+        MapHumiditySensorWithFirebase
+    );
+
+    // Field4 - Humidity Sensor
+    const humidityData4 = data.user.field4.humidity_minute;
+    load(
+        humidityData4,
+        process.env[ConfigKeys.THINGSBOARD_FIELD4_HUMIDITY_SENSOR_ACCESS_TOKEN],
         MapHumiditySensorWithFirebase
     );
 
@@ -53,7 +77,7 @@ async function load(rawData, accessToken, fieldsMap) {
                 { ts: timestamp, values: data }
             );
 
-            await sleep(500);
+            await sleep(7000);
         }
     }
 }

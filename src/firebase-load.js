@@ -50,13 +50,13 @@ function loadData() {
         MapHumiditySensorWithFirebase
     );
 
-    // Weather Station
-    const measuredData = data.user.field1.measured_data;
-    load(
-        measuredData,
-        process.env[ConfigKeys.THINGSBOARD_WEATHER_STATION_ACCESS_TOKEN],
-        MapWeatherStationWithFirebase
-    );
+    // // Weather Station
+    // const measuredData = data.user.field1.measured_data;
+    // load(
+    //     measuredData,
+    //     process.env[ConfigKeys.THINGSBOARD_WEATHER_STATION_ACCESS_TOKEN],
+    //     MapWeatherStationWithFirebase
+    // );
 }
 
 async function load(rawData, accessToken, fieldsMap) {
@@ -77,7 +77,7 @@ async function load(rawData, accessToken, fieldsMap) {
                 { ts: timestamp, values: data }
             );
 
-            await sleep(7000);
+            await sleep(700);
         }
     }
 }

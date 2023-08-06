@@ -65,7 +65,7 @@ async function load(rawData, accessToken, fieldsMap) {
         const hours = Object.keys(rawData[days[i]]);
         for (let j = 0; j < hours.length; j++) {
             const timestamp = new Date(`${days[i]} ${hours[j]}`).getTime();
-            if (timestamp < new Date('2023-08-06 00:00:00').getTime()) continue;
+            // if (timestamp < new Date('2023-08-06 00:00:00').getTime()) continue;
 
             const data = convertRawData(rawData[days[i]][hours[j]], fieldsMap);
 

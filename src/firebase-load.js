@@ -77,7 +77,7 @@ async function load(rawData, accessToken, fieldsMap) {
                 { ts: timestamp, values: data }
             );
 
-            await sleep(700);
+            await sleep(1000);
         }
     }
 }
